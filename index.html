@@ -195,7 +195,9 @@
     .hero-bg.zoomed { transform: scale(1); }
     .hero-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(135deg, rgba(12,22,32,0.88) 0%, rgba(28,43,58,0.68) 55%, rgba(12,22,32,0.6) 100%);
+      background:
+        linear-gradient(to bottom, rgba(8,16,26,0.55) 0%, rgba(8,16,26,0.72) 100%),
+        linear-gradient(to right,  rgba(8,16,26,0.82) 0%, rgba(8,16,26,0.38) 100%);
     }
     .hero-content { position: relative; z-index: 2; color: var(--white); max-width: 660px; }
 
@@ -219,7 +221,7 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(38px, 6.5vw, 72px);
       font-weight: 700; line-height: 1.08; margin-bottom: 22px;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+      text-shadow: 0 2px 12px rgba(0,0,0,0.55), 0 4px 32px rgba(0,0,0,0.4);
     }
     .hero-title-accent {
       font-family: 'Cormorant Garamond', serif;
@@ -231,8 +233,9 @@
     }
 
     .hero-sub {
-      font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.8);
+      font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.93);
       line-height: 1.75; margin-bottom: 38px; max-width: 500px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.45);
     }
     .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
