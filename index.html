@@ -636,17 +636,22 @@
       .hero-stats-row { display: none; }
       .scroll-hint { display: none; }
 
-      /* Perks — horizontal scroll strip instead of stacked grid */
+      /* Perks — 3-top / 2-bottom centered grid, all visible at once */
       .perks-row {
-        display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch;
-        scrollbar-width: none; gap: 0;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
       }
-      .perks-row::-webkit-scrollbar { display: none; }
       .perk {
-        flex: 0 0 160px; border-right: 1px solid rgba(255,255,255,0.07);
-        border-bottom: none; padding: 24px 16px;
+        grid-column: span 2;
+        border-right: 1px solid rgba(255,255,255,0.07);
+        border-bottom: 1px solid rgba(255,255,255,0.07);
+        padding: 22px 10px;
+        flex: unset;
       }
-      .perk:last-child { border-right: none; }
+      /* Center the bottom row of 2 */
+      .perk:nth-child(4) { grid-column: 2 / span 2; border-bottom: none; }
+      .perk:nth-child(5) { grid-column: 4 / span 2; border-right: none; border-bottom: none; }
+      .perk:nth-child(3) { border-right: none; }
       .perk-ico { width: 42px; height: 42px; margin-bottom: 10px; }
       .perk-ico svg { width: 20px; height: 20px; }
       .perk-name { font-size: 12px; }
@@ -701,8 +706,9 @@
       .hero-btns { flex-direction: column; }
       .hero-btns .btn { justify-content: center; }
 
-      /* Perks strip tighter */
-      .perk { flex: 0 0 140px; padding: 20px 12px; }
+      /* Perks tighter on small phones */
+      .perk { padding: 18px 8px; }
+      .perk-name { font-size: 11px; }
 
       /* Units */
       .unit-body { padding: 20px 20px 24px; }
