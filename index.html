@@ -129,8 +129,6 @@
 
     .nav-logo img {
       height: 42px; width: auto;
-      filter: invert(1);
-      mix-blend-mode: screen;
       transition: height var(--t);
     }
     #nav.solid .nav-logo img { height: 34px; }
@@ -222,7 +220,15 @@
       font-weight: 700; line-height: 1.08; margin-bottom: 22px;
       text-shadow: 0 2px 20px rgba(0,0,0,0.25);
     }
-    .hero-title em { font-style: italic; color: var(--gold); }
+    .hero-title-accent {
+      font-family: 'Inter', sans-serif;
+      font-style: normal;
+      font-weight: 300;
+      color: var(--gold);
+      letter-spacing: 2px;
+      font-size: 0.78em;
+      text-transform: uppercase;
+    }
 
     .hero-sub {
       font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.8);
@@ -456,7 +462,7 @@
       gap: 60px; padding-bottom: 48px;
       border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-    .foot-logo img { height: 42px; filter: invert(1); mix-blend-mode: screen; margin-bottom: 16px; }
+    .foot-logo img { height: 42px; margin-bottom: 16px; }
     .foot-logo p { color: rgba(255,255,255,0.48); font-size: 14px; line-height: 1.7; max-width: 290px; }
     .foot-contact { display: flex; flex-direction: column; gap: 12px; margin-top: 22px; }
     .fci { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.62); font-size: 13px; }
@@ -641,7 +647,7 @@
 <nav id="nav">
   <div class="container">
     <div class="nav-wrap">
-      <a href="#" class="nav-logo"><img src="logo.PNG" alt="Barrington Pointe"></a>
+      <a href="#" class="nav-logo"><img src="logo-transparent.png" alt="Barrington Pointe"></a>
       <ul class="nav-links">
         <li><a href="#units">Our Units</a></li>
         <li><a href="#gallery">Gallery</a></li>
@@ -676,7 +682,7 @@
         TDY Rates Honored &nbsp;·&nbsp; Move-In Ready
       </div>
       <h1 class="hero-title">
-        Your Home<br><em>Away from Home</em><br>Near Keesler AFB
+        Your Home<br><span class="hero-title-accent">Away from Home</span><br>Near Keesler AFB
       </h1>
       <p class="hero-sub">
         Fully furnished, move-in ready apartments designed for TDY service members in D'Iberville, MS. All utilities included — just 4 miles from Keesler Air Force Base.
@@ -992,7 +998,7 @@
   <div class="container">
     <div class="foot-top">
       <div class="foot-logo">
-        <img src="logo.PNG" alt="Barrington Pointe">
+        <img src="logo-transparent.png" alt="Barrington Pointe">
         <p>Premium TDY accommodations near Keesler Air Force Base in D'Iberville, MS. Fully furnished, move-in ready. TDY rates honored.</p>
         <div class="foot-contact">
           <div class="fci"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>12088 Lamey Bridge Rd, D'Iberville, MS 39540</div>

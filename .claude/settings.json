@@ -6,7 +6,9 @@
       "WebFetch(domain:www.barringtonpointe.com)",
       "Bash(start \"c:/Users/OLIVI/OneDrive/bp/index.html\")",
       "Bash(gh --version)",
-      "Bash(gh repo *)"
+      "Bash(gh repo *)",
+      "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(python -c \"from PIL import Image; print\\('ok'\\)\")"
     ]
   }
 }
