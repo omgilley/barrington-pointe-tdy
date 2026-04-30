@@ -8,7 +8,10 @@
       "Bash(gh --version)",
       "Bash(gh repo *)",
       "Bash(python3 -c \"from PIL import Image; print\\('ok'\\)\")",
-      "Bash(python -c \"from PIL import Image; print\\('ok'\\)\")"
+      "Bash(python -c \"from PIL import Image; print\\('ok'\\)\")",
+      "Bash(npm --version)",
+      "Bash(npm list *)",
+      "Bash(node convert-heic.mjs)"
     ]
   }
 }

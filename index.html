@@ -9,7 +9,7 @@
   <title>Barrington Pointe | TDY Units · D'Iberville, MS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
   <style>
     /* ===== RESET & VARIABLES ===== */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -221,13 +221,12 @@
       text-shadow: 0 2px 20px rgba(0,0,0,0.25);
     }
     .hero-title-accent {
-      font-family: 'Inter', sans-serif;
-      font-style: normal;
-      font-weight: 300;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 500;
       color: var(--gold);
-      letter-spacing: 2px;
-      font-size: 0.78em;
-      text-transform: uppercase;
+      font-size: 1.08em;
+      letter-spacing: 1px;
     }
 
     .hero-sub {
@@ -412,6 +411,23 @@
     }
     .gi:hover .gi-ov { opacity: 1; }
     .gi-ov span { color: var(--white); font-size: 13px; font-weight: 500; }
+
+    /* Gallery tabs */
+    .gal-tabs {
+      display: flex; gap: 6px; justify-content: center;
+      margin-bottom: 36px;
+    }
+    .gal-tab {
+      padding: 10px 32px; border-radius: 50px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+      border: 2px solid var(--gray-200); color: var(--text-mid);
+      transition: all var(--t); background: var(--white);
+    }
+    .gal-tab.active {
+      background: var(--navy); color: var(--white); border-color: var(--navy);
+    }
+    .gal-panel { display: none; }
+    .gal-panel.active { display: grid; }
 
     /* ===== LOCATION ===== */
     #location { padding: 108px 0; background: var(--navy); }
@@ -803,10 +819,17 @@
       <!-- 3BR -->
       <div class="unit-card reveal d2">
         <div class="uslider" id="s3">
-          <div class="unit-badge badge-soon">Coming Soon</div>
-          <div class="slide on"><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><p>Photos Coming Soon</p></div></div>
-          <div class="slide"><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><p>Photos Coming Soon</p></div></div>
-          <div class="slide"><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><p>Photos Coming Soon</p></div></div>
+          <div class="unit-badge badge-avail">Available Now</div>
+          <div class="slide on"><img src="3br/IMG_5664.jpeg" alt="3BR living room" loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5662.jpeg"  alt="3BR living area"           loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5719.jpeg"  alt="3BR open plan"             loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5750.jpeg"  alt="3BR dining and kitchen"    loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5686.jpeg"  alt="3BR dining room"           loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5689.jpeg"  alt="3BR master bedroom"        loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5704.jpeg"  alt="3BR bedroom closets"       loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5690.jpeg"  alt="3BR bedroom"               loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5694.jpeg"  alt="3BR interior"              loading="lazy"></div>
+          <div class="slide"><img src="3br/IMG_5697.jpeg"  alt="3BR interior"              loading="lazy"></div>
           <button class="sl-btn prev" onclick="mv('s3',-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
           <button class="sl-btn next" onclick="mv('s3', 1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
           <div class="sl-dots" id="d3"></div>
@@ -905,19 +928,41 @@
       <div class="divider center"></div>
       <p class="section-sub" style="margin:0 auto;text-align:center;">Explore our beautifully furnished 2-bedroom units. 3-bedroom photos coming soon.</p>
     </div>
-    <div class="gal-grid">
-      <div class="gi tall reveal"    onclick="lb(0)"><img src="2br/IMG_5756.jpeg" alt="Courtyard"><div class="gi-ov"><span>Courtyard</span></div></div>
-      <div class="gi reveal d1"      onclick="lb(1)"><img src="2br/IMG_5755.jpeg" alt="Exterior"><div class="gi-ov"><span>Building Exterior</span></div></div>
-      <div class="gi reveal d2"      onclick="lb(2)"><img src="2br/IMG_5731.jpeg" alt="Living Room"><div class="gi-ov"><span>Living Room</span></div></div>
-      <div class="gi reveal d1"      onclick="lb(3)"><img src="2br/IMG_5730.jpeg" alt="Kitchen"><div class="gi-ov"><span>Kitchen</span></div></div>
-      <div class="gi wide reveal d2" onclick="lb(4)"><img src="2br/IMG_5747.jpeg" alt="Open Kitchen"><div class="gi-ov"><span>Open Kitchen Layout</span></div></div>
-      <div class="gi reveal d3"      onclick="lb(5)"><img src="2br/IMG_5724.jpeg" alt="Dining"><div class="gi-ov"><span>Dining Area</span></div></div>
-      <div class="gi reveal d1"      onclick="lb(6)"><img src="2br/IMG_5744.jpeg" alt="Bedroom"><div class="gi-ov"><span>Master Bedroom</span></div></div>
-      <div class="gi reveal d2"      onclick="lb(7)"><img src="2br/IMG_5743.jpeg" alt="Bathroom"><div class="gi-ov"><span>Bathroom</span></div></div>
-      <div class="gi reveal d3"      onclick="lb(8)"><img src="2br/IMG_5746.jpeg" alt="Bathroom 2"><div class="gi-ov"><span>Second Bathroom</span></div></div>
-      <div class="gi reveal d4"      onclick="lb(9)"><img src="2br/IMG_5735.jpeg" alt="Interior"><div class="gi-ov"><span>Interior</span></div></div>
-      <div class="gi reveal d5"      onclick="lb(10)"><img src="2br/IMG_5745.jpeg" alt="Interior"><div class="gi-ov"><span>Interior Detail</span></div></div>
+    <div class="gal-tabs">
+      <button class="gal-tab active" onclick="switchTab('2br',this)">2 Bedroom</button>
+      <button class="gal-tab"        onclick="switchTab('3br',this)">3 Bedroom</button>
     </div>
+
+    <!-- 2BR gallery -->
+    <div class="gal-panel gal-grid active" id="gal-2br">
+      <div class="gi tall" onclick="lb('2br',0)"><img src="2br/IMG_5756.jpeg" alt="Courtyard"><div class="gi-ov"><span>Courtyard</span></div></div>
+      <div class="gi"      onclick="lb('2br',1)"><img src="2br/IMG_5755.jpeg" alt="Exterior"><div class="gi-ov"><span>Building Exterior</span></div></div>
+      <div class="gi"      onclick="lb('2br',2)"><img src="2br/IMG_5731.jpeg" alt="Living Room"><div class="gi-ov"><span>Living Room</span></div></div>
+      <div class="gi"      onclick="lb('2br',3)"><img src="2br/IMG_5730.jpeg" alt="Kitchen"><div class="gi-ov"><span>Kitchen</span></div></div>
+      <div class="gi wide" onclick="lb('2br',4)"><img src="2br/IMG_5747.jpeg" alt="Open Kitchen"><div class="gi-ov"><span>Open Kitchen</span></div></div>
+      <div class="gi"      onclick="lb('2br',5)"><img src="2br/IMG_5724.jpeg" alt="Dining"><div class="gi-ov"><span>Dining Area</span></div></div>
+      <div class="gi"      onclick="lb('2br',6)"><img src="2br/IMG_5744.jpeg" alt="Bedroom"><div class="gi-ov"><span>Master Bedroom</span></div></div>
+      <div class="gi"      onclick="lb('2br',7)"><img src="2br/IMG_5743.jpeg" alt="Bathroom"><div class="gi-ov"><span>Bathroom</span></div></div>
+      <div class="gi"      onclick="lb('2br',8)"><img src="2br/IMG_5746.jpeg" alt="Bathroom 2"><div class="gi-ov"><span>Second Bathroom</span></div></div>
+      <div class="gi"      onclick="lb('2br',9)"><img src="2br/IMG_5735.jpeg" alt="Interior"><div class="gi-ov"><span>Interior</span></div></div>
+      <div class="gi"      onclick="lb('2br',10)"><img src="2br/IMG_5745.jpeg" alt="Interior"><div class="gi-ov"><span>Interior Detail</span></div></div>
+    </div>
+
+    <!-- 3BR gallery -->
+    <div class="gal-panel gal-grid" id="gal-3br">
+      <div class="gi tall" onclick="lb('3br',0)"><img src="3br/IMG_5664.jpeg" alt="Living Room"><div class="gi-ov"><span>Living Room</span></div></div>
+      <div class="gi"      onclick="lb('3br',1)"><img src="3br/IMG_5662.jpeg" alt="Living Area"><div class="gi-ov"><span>Living Area</span></div></div>
+      <div class="gi"      onclick="lb('3br',2)"><img src="3br/IMG_5719.jpeg" alt="Open Plan"><div class="gi-ov"><span>Open Plan</span></div></div>
+      <div class="gi"      onclick="lb('3br',3)"><img src="3br/IMG_5750.jpeg" alt="Dining & Kitchen"><div class="gi-ov"><span>Dining &amp; Kitchen</span></div></div>
+      <div class="gi wide" onclick="lb('3br',4)"><img src="3br/IMG_5686.jpeg" alt="Dining Room"><div class="gi-ov"><span>Dining Room</span></div></div>
+      <div class="gi"      onclick="lb('3br',5)"><img src="3br/IMG_5689.jpeg" alt="Master Bedroom"><div class="gi-ov"><span>Master Bedroom</span></div></div>
+      <div class="gi"      onclick="lb('3br',6)"><img src="3br/IMG_5704.jpeg" alt="Closets"><div class="gi-ov"><span>Bedroom Closets</span></div></div>
+      <div class="gi"      onclick="lb('3br',7)"><img src="3br/IMG_5690.jpeg" alt="Bedroom"><div class="gi-ov"><span>Bedroom</span></div></div>
+      <div class="gi"      onclick="lb('3br',8)"><img src="3br/IMG_5694.jpeg" alt="Interior"><div class="gi-ov"><span>Interior</span></div></div>
+      <div class="gi"      onclick="lb('3br',9)"><img src="3br/IMG_5697.jpeg" alt="Interior"><div class="gi-ov"><span>Interior</span></div></div>
+      <div class="gi"      onclick="lb('3br',10)"><img src="3br/IMG_5708.jpeg" alt="Interior"><div class="gi-ov"><span>Interior</span></div></div>
+    </div>
+
     <div style="text-align:center;margin-top:44px;">
       <button class="btn btn-outline-d" onclick="openModal()">Schedule a Tour to See More</button>
     </div>
@@ -1173,36 +1218,60 @@ setInterval(() => mv('s2', 1), 5200);
   }, { passive: true });
 });
 
-/* ── GALLERY LIGHTBOX ── */
-const imgs = [
-  { src: '2br/IMG_5756.jpeg', lbl: 'Courtyard' },
-  { src: '2br/IMG_5755.jpeg', lbl: 'Building Exterior' },
-  { src: '2br/IMG_5731.jpeg', lbl: 'Living Room' },
-  { src: '2br/IMG_5730.jpeg', lbl: 'Kitchen' },
-  { src: '2br/IMG_5747.jpeg', lbl: 'Open Kitchen Layout' },
-  { src: '2br/IMG_5724.jpeg', lbl: 'Dining Area' },
-  { src: '2br/IMG_5744.jpeg', lbl: 'Master Bedroom' },
-  { src: '2br/IMG_5743.jpeg', lbl: 'Bathroom' },
-  { src: '2br/IMG_5746.jpeg', lbl: 'Second Bathroom' },
-  { src: '2br/IMG_5735.jpeg', lbl: 'Interior' },
-  { src: '2br/IMG_5745.jpeg', lbl: 'Interior Detail' },
-];
-let lbIdx = 0;
+/* ── GALLERY TABS ── */
+const galImgs = {
+  '2br': [
+    { src: '2br/IMG_5756.jpeg', lbl: 'Courtyard' },
+    { src: '2br/IMG_5755.jpeg', lbl: 'Building Exterior' },
+    { src: '2br/IMG_5731.jpeg', lbl: 'Living Room' },
+    { src: '2br/IMG_5730.jpeg', lbl: 'Kitchen' },
+    { src: '2br/IMG_5747.jpeg', lbl: 'Open Kitchen Layout' },
+    { src: '2br/IMG_5724.jpeg', lbl: 'Dining Area' },
+    { src: '2br/IMG_5744.jpeg', lbl: 'Master Bedroom' },
+    { src: '2br/IMG_5743.jpeg', lbl: 'Bathroom' },
+    { src: '2br/IMG_5746.jpeg', lbl: 'Second Bathroom' },
+    { src: '2br/IMG_5735.jpeg', lbl: 'Interior' },
+    { src: '2br/IMG_5745.jpeg', lbl: 'Interior Detail' },
+  ],
+  '3br': [
+    { src: '3br/IMG_5664.jpeg', lbl: 'Living Room' },
+    { src: '3br/IMG_5662.jpeg', lbl: 'Living Area' },
+    { src: '3br/IMG_5719.jpeg', lbl: 'Open Plan' },
+    { src: '3br/IMG_5750.jpeg', lbl: 'Dining & Kitchen' },
+    { src: '3br/IMG_5686.jpeg', lbl: 'Dining Room' },
+    { src: '3br/IMG_5689.jpeg', lbl: 'Master Bedroom' },
+    { src: '3br/IMG_5704.jpeg', lbl: 'Bedroom Closets' },
+    { src: '3br/IMG_5690.jpeg', lbl: 'Bedroom' },
+    { src: '3br/IMG_5694.jpeg', lbl: 'Interior' },
+    { src: '3br/IMG_5697.jpeg', lbl: 'Interior' },
+    { src: '3br/IMG_5708.jpeg', lbl: 'Interior' },
+  ]
+};
+let lbIdx = 0, lbSet_key = '2br';
 const lbEl  = document.getElementById('lb-el');
 const lbImg = document.getElementById('lbImg');
 const lbCt  = document.getElementById('lbCt');
 
-function lb(i) {
-  lbIdx = i; lbSet();
+function switchTab(key, btn) {
+  document.querySelectorAll('.gal-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.gal-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('gal-' + key).classList.add('active');
+  lbSet_key = key;
+}
+
+function lb(key, i) {
+  lbSet_key = key; lbIdx = i; lbRender();
   lbEl.classList.add('on');
   document.body.style.overflow = 'hidden';
 }
-function lbClose() {
-  lbEl.classList.remove('on');
-  document.body.style.overflow = '';
+function lbClose() { lbEl.classList.remove('on'); document.body.style.overflow = ''; }
+function lbNav(d) {
+  const imgs = galImgs[lbSet_key];
+  lbIdx = (lbIdx + d + imgs.length) % imgs.length; lbRender();
 }
-function lbNav(d) { lbIdx = (lbIdx + d + imgs.length) % imgs.length; lbSet(); }
-function lbSet() {
+function lbRender() {
+  const imgs = galImgs[lbSet_key];
   lbImg.src = imgs[lbIdx].src;
   lbImg.alt = imgs[lbIdx].lbl;
   lbCt.textContent = (lbIdx + 1) + ' / ' + imgs.length + ' — ' + imgs[lbIdx].lbl;
@@ -1212,7 +1281,7 @@ lbEl.addEventListener('click', e => { if (e.target === lbEl) lbClose(); });
 /* Swipe lightbox */
 let lbTx = 0;
 lbEl.addEventListener('touchstart', e => { lbTx = e.touches[0].clientX; }, { passive: true });
-lbEl.addEventListener('touchend',   e => {
+lbEl.addEventListener('touchend', e => {
   const d = lbTx - e.changedTouches[0].clientX;
   if (Math.abs(d) > 44) lbNav(d > 0 ? 1 : -1);
 }, { passive: true });
