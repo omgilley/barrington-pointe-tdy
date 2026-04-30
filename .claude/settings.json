@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:monarchhouzz.com)",
+      "WebFetch(domain:www.biloxistay.com)",
+      "WebFetch(domain:www.barringtonpointe.com)",
+      "Bash(start \"c:/Users/OLIVI/OneDrive/bp/index.html\")",
+      "Bash(gh --version)",
+      "Bash(gh repo *)"
+    ]
+  }
+}

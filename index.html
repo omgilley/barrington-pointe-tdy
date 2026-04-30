@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Barrington Pointe TDY Units — Fully furnished, move-in ready apartments near Keesler AFB in D'Iberville, MS. TDY rates honored. Digital keyless entry, utilities & WiFi included.">
+  <meta property="og:title" content="Barrington Pointe | TDY Units Near Keesler AFB">
+  <meta property="og:description" content="Move-in ready, fully furnished TDY apartments in D'Iberville, MS. 4 miles from Keesler AFB. TDY rates honored, all utilities included.">
+  <title>Barrington Pointe | TDY Units · D'Iberville, MS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & VARIABLES ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #1C2B3A;
+      --navy-dark:  #0F1A26;
+      --gold:       #C9A87C;
+      --gold-dark:  #A8865A;
+      --gold-light: #EDD9B5;
+      --cream:      #F7F4EE;
+      --white:      #FFFFFF;
+      --gray-100:   #F5F5F5;
+      --gray-200:   #E5E0D8;
+      --gray-400:   #AAAAAA;
+      --gray-600:   #666666;
+      --text:       #1A1A1A;
+      --text-mid:   #4A4A4A;
+      --shadow-sm:  0 2px 10px rgba(0,0,0,0.08);
+      --shadow:     0 4px 24px rgba(0,0,0,0.12);
+      --shadow-lg:  0 10px 48px rgba(0,0,0,0.18);
+      --radius:     4px;
+      --radius-lg:  12px;
+      --t:          0.3s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: var(--white);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+    a   { text-decoration: none; color: inherit; }
+    ul  { list-style: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+    /* ===== UTILITY ===== */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 28px; }
+
+    .label {
+      display: inline-block;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 3px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700; line-height: 1.15;
+      color: var(--navy); margin-bottom: 16px;
+    }
+    .section-title.light { color: var(--white); }
+
+    .section-sub {
+      font-size: 16px; color: var(--text-mid);
+      max-width: 560px; line-height: 1.75;
+    }
+    .section-sub.light { color: rgba(255,255,255,0.72); }
+
+    .divider { width: 56px; height: 3px; background: var(--gold); margin: 18px 0; }
+    .divider.center { margin: 18px auto; }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 14px 32px; font-size: 14px; font-weight: 600;
+      letter-spacing: 0.4px; border-radius: var(--radius);
+      transition: all var(--t); white-space: nowrap;
+    }
+    .btn-gold {
+      background: var(--gold); color: var(--navy-dark);
+    }
+    .btn-gold:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(201,168,124,0.45);
+    }
+    .btn-outline-w {
+      background: transparent; color: var(--white);
+      border: 2px solid rgba(255,255,255,0.65);
+    }
+    .btn-outline-w:hover { background: rgba(255,255,255,0.12); border-color: var(--white); }
+
+    .btn-outline-d {
+      background: transparent; color: var(--navy);
+      border: 2px solid var(--navy);
+    }
+    .btn-outline-d:hover { background: var(--navy); color: var(--white); }
+
+    /* Scroll animations */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.75s ease, transform 0.75s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    .reveal.d1 { transition-delay: 0.1s; }
+    .reveal.d2 { transition-delay: 0.2s; }
+    .reveal.d3 { transition-delay: 0.3s; }
+    .reveal.d4 { transition-delay: 0.4s; }
+    .reveal.d5 { transition-delay: 0.5s; }
+
+    /* ===== NAVBAR ===== */
+    #nav {
+      position: fixed; inset: 0 0 auto;
+      z-index: 900; padding: 22px 0;
+      transition: background var(--t), box-shadow var(--t), padding var(--t);
+    }
+    #nav.solid {
+      background: var(--navy-dark);
+      box-shadow: 0 2px 24px rgba(0,0,0,0.35);
+      padding: 13px 0;
+    }
+    .nav-wrap { display: flex; align-items: center; justify-content: space-between; }
+
+    .nav-logo img {
+      height: 42px; width: auto;
+      filter: invert(1);
+      mix-blend-mode: screen;
+      transition: height var(--t);
+    }
+    #nav.solid .nav-logo img { height: 34px; }
+
+    .nav-links { display: flex; align-items: center; gap: 34px; }
+    .nav-links a {
+      font-size: 13px; font-weight: 500; letter-spacing: 0.4px;
+      color: rgba(255,255,255,0.82); position: relative;
+      transition: color var(--t);
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0;
+      width: 0; height: 2px; background: var(--gold);
+      transition: width var(--t);
+    }
+    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-cta {
+      background: var(--gold); color: var(--navy-dark) !important;
+      padding: 9px 22px; border-radius: var(--radius);
+      font-weight: 700 !important; transition: all var(--t) !important;
+    }
+    .nav-cta:hover { background: var(--gold-dark) !important; transform: translateY(-1px); }
+    .nav-cta::after { display: none !important; }
+
+    /* Hamburger */
+    .burger { display: none; flex-direction: column; gap: 5px; padding: 4px; z-index: 910; }
+    .burger span { display: block; width: 25px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
+    .burger.on span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.on span:nth-child(2) { opacity: 0; }
+    .burger.on span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Mobile nav overlay */
+    .mob-nav {
+      position: fixed; inset: 0; background: var(--navy-dark);
+      z-index: 905; display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 28px;
+      opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    }
+    .mob-nav.on { opacity: 1; pointer-events: all; }
+    .mob-nav a {
+      font-family: 'Playfair Display', serif; font-size: 26px;
+      color: var(--white); transition: color var(--t);
+    }
+    .mob-nav a:hover { color: var(--gold); }
+    .mob-nav .mob-cta {
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700;
+      background: var(--gold); color: var(--navy-dark);
+      padding: 14px 40px; border-radius: var(--radius); margin-top: 8px;
+    }
+
+    /* ===== HERO ===== */
+    #hero {
+      position: relative; height: 100vh; min-height: 620px;
+      display: flex; align-items: center; overflow: hidden;
+    }
+    .hero-bg {
+      position: absolute; inset: 0;
+      background: url('2br/IMG_5756.jpeg') center/cover no-repeat;
+      transform: scale(1.06); transition: transform 8s ease;
+    }
+    .hero-bg.zoomed { transform: scale(1); }
+    .hero-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(12,22,32,0.88) 0%, rgba(28,43,58,0.68) 55%, rgba(12,22,32,0.6) 100%);
+    }
+    .hero-content { position: relative; z-index: 2; color: var(--white); max-width: 660px; }
+
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 9px;
+      background: rgba(201,168,124,0.18); border: 1px solid rgba(201,168,124,0.45);
+      color: var(--gold-light); padding: 8px 18px;
+      border-radius: 50px; font-size: 11px; font-weight: 600;
+      letter-spacing: 2px; text-transform: uppercase; margin-bottom: 26px;
+    }
+    .hero-pill-dot {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--gold);
+      animation: blink 2s infinite;
+    }
+    @keyframes blink {
+      0%,100% { opacity:1; transform:scale(1); }
+      50%      { opacity:.4; transform:scale(.7); }
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 6.5vw, 72px);
+      font-weight: 700; line-height: 1.08; margin-bottom: 22px;
+      text-shadow: 0 2px 20px rgba(0,0,0,0.25);
+    }
+    .hero-title em { font-style: italic; color: var(--gold); }
+
+    .hero-sub {
+      font-size: clamp(15px, 2vw, 18px); color: rgba(255,255,255,0.8);
+      line-height: 1.75; margin-bottom: 38px; max-width: 500px;
+    }
+    .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+    /* Stats strip on hero */
+    .hero-stats {
+      position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;
+      background: linear-gradient(to top, rgba(12,22,32,0.6), transparent);
+      padding: 40px 0 30px;
+    }
+    .hero-stats-row { display: flex; justify-content: flex-end; gap: 56px; }
+    .hero-stat { text-align: center; }
+    .hstat-n {
+      font-family: 'Playfair Display', serif; font-size: 34px;
+      font-weight: 700; color: var(--gold); line-height: 1;
+    }
+    .hstat-l { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+    .scroll-hint {
+      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+      z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 7px;
+      color: rgba(255,255,255,0.5); font-size: 9px; letter-spacing: 2.5px; text-transform: uppercase;
+    }
+    .scroll-line { width: 1px; height: 38px; background: linear-gradient(to bottom, rgba(255,255,255,0.5),transparent); animation: sl 2s infinite; }
+    @keyframes sl {
+      0%   { transform: scaleY(0); transform-origin: top; }
+      49%  { transform: scaleY(1); transform-origin: top; }
+      50%  { transform: scaleY(1); transform-origin: bottom; }
+      100% { transform: scaleY(0); transform-origin: bottom; }
+    }
+
+    /* ===== TDY PERKS BAR ===== */
+    #perks { background: var(--navy-dark); }
+    .perks-row { display: grid; grid-template-columns: repeat(5,1fr); }
+    .perk {
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center; padding: 38px 18px;
+      border-right: 1px solid rgba(255,255,255,0.07);
+      transition: background var(--t);
+    }
+    .perk:last-child { border-right: none; }
+    .perk:hover { background: rgba(201,168,124,0.07); }
+    .perk-ico {
+      width: 54px; height: 54px; border-radius: 50%;
+      background: rgba(201,168,124,0.13); border: 1.5px solid rgba(201,168,124,0.28);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 14px; transition: all var(--t);
+    }
+    .perk:hover .perk-ico { background: rgba(201,168,124,0.22); border-color: var(--gold); }
+    .perk-ico svg { width: 24px; height: 24px; stroke: var(--gold); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .perk-name { font-size: 13px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
+    .perk-desc { font-size: 11px; color: rgba(255,255,255,0.42); line-height: 1.5; }
+
+    /* ===== UNITS ===== */
+    #units { padding: 108px 0; background: var(--cream); }
+    .units-hd { text-align: center; margin-bottom: 64px; }
+    .units-hd .section-sub { margin: 0 auto; text-align: center; }
+    .units-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+
+    .unit-card {
+      background: var(--white); border-radius: var(--radius-lg);
+      overflow: hidden; box-shadow: var(--shadow);
+      transition: transform var(--t), box-shadow var(--t);
+    }
+    .unit-card:hover { transform: translateY(-7px); box-shadow: var(--shadow-lg); }
+
+    /* Slider */
+    .uslider { position: relative; aspect-ratio: 4/3; overflow: hidden; background: #ccc; }
+    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.55s ease; }
+    .slide.on { opacity: 1; }
+    .slide img { width: 100%; height: 100%; object-fit: cover; }
+
+    .ph {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, #C8C8C8 0%, #D8D8D8 50%, #C0C0C0 100%);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      color: #999; gap: 14px;
+    }
+    .ph svg { width: 58px; height: 58px; stroke: #B0B0B0; fill: none; stroke-width: 1.5; }
+    .ph p { font-size: 14px; font-weight: 500; color: #AAAAAA; }
+
+    .sl-btn {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 38px; height: 38px; border-radius: 50%;
+      background: rgba(255,255,255,0.9); z-index: 5;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.18); transition: all var(--t);
+    }
+    .sl-btn:hover { background: var(--white); transform: translateY(-50%) scale(1.1); }
+    .sl-btn.prev { left: 13px; }
+    .sl-btn.next { right: 13px; }
+    .sl-btn svg { width: 17px; height: 17px; stroke: var(--navy); fill: none; stroke-width: 2.2; }
+
+    .sl-dots { position: absolute; bottom: 13px; left: 50%; transform: translateX(-50%); display: flex; gap: 6px; z-index: 5; }
+    .sl-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: rgba(255,255,255,0.5); transition: all 0.3s; cursor: pointer;
+    }
+    .sl-dot.on { background: var(--white); transform: scale(1.35); }
+
+    .unit-badge {
+      position: absolute; top: 15px; left: 15px; z-index: 5;
+      font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 50px;
+    }
+    .badge-avail { background: var(--gold); color: var(--navy-dark); }
+    .badge-soon  { background: var(--navy); color: var(--white); }
+
+    .unit-body { padding: 28px 30px 30px; }
+    .unit-type { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 7px; }
+    .unit-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; color: var(--navy); margin-bottom: 16px; }
+
+    .unit-feats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 24px; }
+    .uf { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--text-mid); }
+    .uf svg { width: 14px; height: 14px; flex-shrink: 0; stroke: var(--gold); fill: none; stroke-width: 2.5; }
+
+    .unit-foot {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 20px; border-top: 1px solid var(--gray-200);
+    }
+    .unit-rate { font-size: 12px; color: var(--gray-600); }
+    .unit-rate strong { display: block; font-family: 'Playfair Display', serif; font-size: 21px; color: var(--navy); font-weight: 700; }
+
+    /* ===== WHY US ===== */
+    #why { padding: 108px 0; background: var(--white); }
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 88px; align-items: center; }
+    .why-imgs { position: relative; height: 520px; }
+    .why-main {
+      position: absolute; top: 0; left: 0; width: 74%; height: 84%;
+      object-fit: cover; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg);
+    }
+    .why-accent {
+      position: absolute; bottom: 0; right: 0; width: 54%; height: 56%;
+      object-fit: cover; border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg); border: 5px solid var(--white);
+    }
+    .why-badge {
+      position: absolute; bottom: 24px; left: -10px; z-index: 5;
+      background: var(--navy); color: var(--white);
+      padding: 20px 24px; border-radius: var(--radius); box-shadow: var(--shadow);
+    }
+    .why-badge .n { font-family: 'Playfair Display', serif; font-size: 38px; color: var(--gold); line-height: 1; }
+    .why-badge .l { font-size: 12px; color: rgba(255,255,255,0.65); margin-top: 4px; line-height: 1.4; }
+
+    .why-list { display: flex; flex-direction: column; gap: 22px; margin-top: 36px; }
+    .why-row { display: flex; gap: 16px; align-items: flex-start; }
+    .why-icon {
+      width: 48px; height: 48px; flex-shrink: 0; border-radius: 10px;
+      background: var(--cream); border: 1px solid var(--gray-200);
+      display: flex; align-items: center; justify-content: center;
+      transition: all var(--t);
+    }
+    .why-row:hover .why-icon { background: var(--navy); }
+    .why-row:hover .why-icon svg { stroke: var(--gold); }
+    .why-icon svg { width: 22px; height: 22px; stroke: var(--navy); fill: none; stroke-width: 1.8; transition: stroke var(--t); }
+    .why-txt h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 3px; }
+    .why-txt p  { font-size: 13px; color: var(--text-mid); line-height: 1.65; }
+
+    /* ===== GALLERY ===== */
+    #gallery { padding: 108px 0; background: var(--cream); }
+    .gal-hd { text-align: center; margin-bottom: 48px; }
+    .gal-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 210px;
+      gap: 10px;
+    }
+    .gi { position: relative; overflow: hidden; border-radius: 8px; cursor: pointer; }
+    .gi.tall { grid-row: span 2; }
+    .gi.wide { grid-column: span 2; }
+    .gi img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gi:hover img { transform: scale(1.08); }
+    .gi-ov {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(28,43,58,0.72) 0%, transparent 55%);
+      opacity: 0; transition: opacity var(--t);
+      display: flex; align-items: flex-end; padding: 18px;
+    }
+    .gi:hover .gi-ov { opacity: 1; }
+    .gi-ov span { color: var(--white); font-size: 13px; font-weight: 500; }
+
+    /* ===== LOCATION ===== */
+    #location { padding: 108px 0; background: var(--navy); }
+    .loc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .loc-desc { color: rgba(255,255,255,0.68); font-size: 16px; line-height: 1.8; margin-top: 12px; }
+    .loc-items { display: flex; flex-direction: column; gap: 22px; margin-top: 36px; }
+    .loc-item { display: flex; align-items: center; gap: 16px; }
+    .loc-ico {
+      width: 44px; height: 44px; flex-shrink: 0; border-radius: 50%;
+      background: rgba(201,168,124,0.14); border: 1px solid rgba(201,168,124,0.28);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .loc-ico svg { width: 19px; height: 19px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+    .loc-item h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+    .loc-item p  { color: rgba(255,255,255,0.52); font-size: 13px; }
+
+    .map-card {
+      background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);
+      border-radius: var(--radius-lg); overflow: hidden;
+    }
+    .map-frame { width: 100%; height: 310px; border: none; display: block; }
+    .map-foot {
+      padding: 20px 24px; display: flex;
+      align-items: center; justify-content: space-between;
+    }
+    .map-addr { color: rgba(255,255,255,0.72); font-size: 13px; line-height: 1.55; }
+    .map-addr strong { display: block; color: var(--white); margin-bottom: 2px; }
+    .dir-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--gold); color: var(--navy-dark);
+      padding: 10px 18px; border-radius: var(--radius);
+      font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
+      white-space: nowrap; transition: all var(--t);
+    }
+    .dir-btn:hover { background: var(--gold-dark); }
+    .dir-btn svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+    /* ===== CTA BAND ===== */
+    #cta { padding: 90px 0; background: var(--cream); text-align: center; }
+    .cta-inner { max-width: 640px; margin: 0 auto; }
+    .cta-inner p { color: var(--text-mid); font-size: 16px; line-height: 1.75; margin-bottom: 36px; }
+    .cta-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--navy-dark); padding: 64px 0 32px; }
+    .foot-top {
+      display: grid; grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px; padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+    }
+    .foot-logo img { height: 42px; filter: invert(1); mix-blend-mode: screen; margin-bottom: 16px; }
+    .foot-logo p { color: rgba(255,255,255,0.48); font-size: 14px; line-height: 1.7; max-width: 290px; }
+    .foot-contact { display: flex; flex-direction: column; gap: 12px; margin-top: 22px; }
+    .fci { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.62); font-size: 13px; }
+    .fci svg { width: 15px; height: 15px; stroke: var(--gold); fill: none; stroke-width: 2; flex-shrink: 0; }
+    .foot-col h4 { font-size: 11px; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 20px; }
+    .foot-col ul { display: flex; flex-direction: column; gap: 10px; }
+    .foot-col ul a { color: rgba(255,255,255,0.52); font-size: 13px; transition: color var(--t); }
+    .foot-col ul a:hover { color: var(--white); }
+    .foot-bot {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 24px;
+    }
+    .foot-copy { color: rgba(255,255,255,0.32); font-size: 12px; }
+    .tdy-badge {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(201,168,124,0.13); border: 1px solid rgba(201,168,124,0.28);
+      color: var(--gold); padding: 6px 16px; border-radius: 50px;
+      font-size: 11px; font-weight: 600; letter-spacing: 1px;
+    }
+
+    /* ===== LIGHTBOX ===== */
+    #lb {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.94);
+      z-index: 2000; display: none; align-items: center; justify-content: center;
+    }
+    #lb.on { display: flex; }
+    .lb-close {
+      position: absolute; top: 18px; right: 18px;
+      width: 46px; height: 46px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); color: var(--white);
+      font-size: 20px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background var(--t);
+    }
+    .lb-close:hover { background: rgba(255,255,255,0.2); }
+    .lb-wrap { position: relative; max-width: 90vw; max-height: 85vh; }
+    .lb-wrap img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 8px; }
+    .lb-nav {
+      position: absolute; top: 50%; transform: translateY(-50%);
+      width: 48px; height: 48px; border-radius: 50%;
+      background: rgba(255,255,255,0.15); color: var(--white);
+      font-size: 24px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background var(--t);
+    }
+    .lb-nav:hover { background: rgba(255,255,255,0.25); }
+    .lb-nav.prev { left: -66px; }
+    .lb-nav.next { right: -66px; }
+    .lb-ct {
+      position: absolute; bottom: -34px; left: 50%; transform: translateX(-50%);
+      color: rgba(255,255,255,0.55); font-size: 13px; white-space: nowrap;
+    }
+
+    /* ===== TOUR MODAL ===== */
+    #modal {
+      position: fixed; inset: 0; z-index: 3000;
+      display: none; align-items: center; justify-content: center; padding: 20px;
+    }
+    #modal.on { display: flex; }
+    .modal-bg { position: absolute; inset: 0; background: rgba(0,0,0,0.72); backdrop-filter: blur(5px); }
+    .modal-card {
+      position: relative; background: var(--white); border-radius: 16px;
+      width: 100%; max-width: 545px; max-height: 92vh; overflow-y: auto;
+      box-shadow: 0 24px 72px rgba(0,0,0,0.5);
+      animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
+    @keyframes popIn {
+      from { opacity:0; transform:scale(0.88) translateY(24px); }
+      to   { opacity:1; transform:scale(1) translateY(0); }
+    }
+    .modal-hd {
+      background: var(--navy); padding: 32px 36px 26px; position: relative;
+      border-radius: 16px 16px 0 0;
+    }
+    .modal-x {
+      position: absolute; top: 14px; right: 14px;
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(255,255,255,0.1); color: var(--white);
+      font-size: 17px; display: flex; align-items: center; justify-content: center;
+      cursor: pointer; transition: background var(--t);
+    }
+    .modal-x:hover { background: rgba(255,255,255,0.2); }
+    .modal-lbl { font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .modal-hd h2 { font-family: 'Playfair Display', serif; font-size: 26px; color: var(--white); font-weight: 700; }
+    .modal-hd p  { color: rgba(255,255,255,0.58); font-size: 13px; margin-top: 6px; }
+
+    .modal-body { padding: 34px 36px; }
+    .frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .fg { margin-bottom: 16px; }
+    .fg label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.4px; color: var(--text); margin-bottom: 6px; }
+    .fg input, .fg select, .fg textarea {
+      width: 100%; padding: 12px 15px;
+      border: 1.5px solid var(--gray-200); border-radius: var(--radius);
+      font-family: inherit; font-size: 14px; color: var(--text); background: var(--white);
+      transition: border-color var(--t), box-shadow var(--t); outline: none; appearance: none;
+    }
+    .fg input:focus, .fg select:focus, .fg textarea:focus {
+      border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,124,0.15);
+    }
+    .fg textarea { resize: vertical; min-height: 85px; }
+    .form-sub {
+      width: 100%; padding: 15px; background: var(--gold); color: var(--navy-dark);
+      font-weight: 700; font-size: 15px; border-radius: var(--radius);
+      transition: all var(--t); letter-spacing: 0.4px;
+    }
+    .form-sub:hover { background: var(--gold-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(201,168,124,0.4); }
+    .form-note { text-align: center; font-size: 11px; color: var(--gray-400); margin-top: 12px; }
+
+    .form-ok { display: none; text-align: center; padding: 48px 36px; }
+    .form-ok.on { display: block; }
+    .ok-ico {
+      width: 64px; height: 64px; border-radius: 50%;
+      background: rgba(201,168,124,0.15); border: 2px solid rgba(201,168,124,0.3);
+      display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;
+    }
+    .ok-ico svg { width: 30px; height: 30px; stroke: var(--gold); fill: none; stroke-width: 2.5; }
+    .form-ok h3 { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--navy); margin-bottom: 10px; }
+    .form-ok p  { color: var(--text-mid); font-size: 14px; line-height: 1.7; }
+    .form-ok a  { color: var(--gold-dark); font-weight: 600; }
+
+    /* ===== FLOAT BUTTON ===== */
+    #fab {
+      position: fixed; bottom: 28px; right: 28px; z-index: 500;
+      display: flex; align-items: center; gap: 9px;
+      background: var(--gold); color: var(--navy-dark);
+      padding: 13px 24px; border-radius: 50px;
+      font-weight: 700; font-size: 14px;
+      box-shadow: 0 6px 28px rgba(201,168,124,0.55);
+      transform: translateY(90px); opacity: 0;
+      transition: transform 0.45s cubic-bezier(0.34,1.56,0.64,1), opacity 0.3s, background 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    #fab.show { transform: translateY(0); opacity: 1; }
+    #fab:hover { background: var(--gold-dark); box-shadow: 0 10px 32px rgba(201,168,124,0.6); transform: translateY(-3px); }
+    #fab svg { width: 17px; height: 17px; stroke: var(--navy-dark); fill: none; stroke-width: 2; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .perks-row { grid-template-columns: repeat(3,1fr); }
+      .perk:nth-child(3) { border-right: none; }
+      .perk:nth-child(4), .perk:nth-child(5) { border-top: 1px solid rgba(255,255,255,0.07); }
+      .why-grid { gap: 52px; }
+      .gal-grid { grid-template-columns: repeat(3,1fr); }
+    }
+
+    @media (max-width: 820px) {
+      .nav-links { display: none; }
+      .burger { display: flex; }
+      .hero-stats-row { display: none; }
+      .perks-row { grid-template-columns: repeat(2,1fr); }
+      .perk { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.07); }
+      .perk:last-child { border-bottom: none; }
+      .units-grid { grid-template-columns: 1fr; max-width: 520px; margin: 0 auto; }
+      .why-grid { grid-template-columns: 1fr; }
+      .why-imgs { height: 320px; }
+      .why-badge { display: none; }
+      .gal-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 180px; }
+      .gi.tall { grid-row: span 1; }
+      .gi.wide { grid-column: span 1; }
+      .loc-grid { grid-template-columns: 1fr; }
+      .foot-top { grid-template-columns: 1fr; gap: 32px; }
+      .foot-bot { flex-direction: column; gap: 12px; text-align: center; }
+      .frow { grid-template-columns: 1fr; }
+      .lb-nav.prev { left: -52px; }
+      .lb-nav.next { right: -52px; }
+    }
+
+    @media (max-width: 540px) {
+      .container { padding: 0 16px; }
+      .perks-row { grid-template-columns: 1fr; }
+      .gal-grid { grid-template-columns: 1fr; grid-auto-rows: 220px; }
+      #fab { right: 14px; bottom: 14px; padding: 11px 18px; font-size: 13px; }
+      .lb-nav { display: none; }
+      .hero-btns { flex-direction: column; }
+      .hero-btns .btn { justify-content: center; }
+      .modal-hd { padding: 24px; }
+      .modal-body { padding: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-wrap">
+      <a href="#" class="nav-logo"><img src="logo.PNG" alt="Barrington Pointe"></a>
+      <ul class="nav-links">
+        <li><a href="#units">Our Units</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#why">Amenities</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#" class="nav-cta" onclick="event.preventDefault();openModal()">Book a Tour</a></li>
+      </ul>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── MOBILE NAV ── -->
+<div class="mob-nav" id="mobNav">
+  <a href="#units"    onclick="closeMob()">Our Units</a>
+  <a href="#gallery"  onclick="closeMob()">Gallery</a>
+  <a href="#why"      onclick="closeMob()">Amenities</a>
+  <a href="#location" onclick="closeMob()">Location</a>
+  <a href="#" class="mob-cta" onclick="event.preventDefault();closeMob();openModal()">Book a Tour</a>
+</div>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="hero-overlay"></div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-pill">
+        <span class="hero-pill-dot"></span>
+        TDY Rates Honored &nbsp;·&nbsp; Move-In Ready
+      </div>
+      <h1 class="hero-title">
+        Your Home<br><em>Away from Home</em><br>Near Keesler AFB
+      </h1>
+      <p class="hero-sub">
+        Fully furnished, move-in ready apartments designed for TDY service members in D'Iberville, MS. All utilities included — just 4 miles from Keesler Air Force Base.
+      </p>
+      <div class="hero-btns">
+        <button class="btn btn-gold" onclick="openModal()">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          Book a Tour
+        </button>
+        <a href="#units" class="btn btn-outline-w">View Units</a>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="container">
+      <div class="hero-stats-row">
+        <div class="hero-stat"><div class="hstat-n">4</div><div class="hstat-l">Miles to Keesler AFB</div></div>
+        <div class="hero-stat"><div class="hstat-n">2–3</div><div class="hstat-l">Bedroom Options</div></div>
+        <div class="hero-stat"><div class="hstat-n">100%</div><div class="hstat-l">Fully Furnished</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+<!-- ── TDY PERKS BAR ── -->
+<section id="perks">
+  <div class="perks-row">
+    <div class="perk reveal">
+      <div class="perk-ico">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+      </div>
+      <div class="perk-name">TDY Rates Honored</div>
+      <div class="perk-desc">Per diem rates available</div>
+    </div>
+    <div class="perk reveal d1">
+      <div class="perk-ico">
+        <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/><circle cx="12" cy="16" r="1" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <div class="perk-name">Digital Keyless Entry</div>
+      <div class="perk-desc">Secure smart lock access</div>
+    </div>
+    <div class="perk reveal d2">
+      <div class="perk-ico">
+        <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="perk-name">Utilities Included</div>
+      <div class="perk-desc">Electric, water &amp; more</div>
+    </div>
+    <div class="perk reveal d3">
+      <div class="perk-ico">
+        <svg viewBox="0 0 24 24"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20" stroke-width="3"/></svg>
+      </div>
+      <div class="perk-name">High-Speed WiFi</div>
+      <div class="perk-desc">Work-from-home ready</div>
+    </div>
+    <div class="perk reveal d4">
+      <div class="perk-ico">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>
+      </div>
+      <div class="perk-name">Washer &amp; Dryer</div>
+      <div class="perk-desc">In-unit laundry included</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── UNITS ── -->
+<section id="units">
+  <div class="container">
+    <div class="units-hd reveal">
+      <span class="label">Available Units</span>
+      <h2 class="section-title">Choose Your Space</h2>
+      <div class="divider center"></div>
+      <p class="section-sub">Beautifully furnished units designed to feel like home. Every detail handled so you can focus on your mission.</p>
+    </div>
+    <div class="units-grid">
+
+      <!-- 2BR -->
+      <div class="unit-card reveal">
+        <div class="uslider" id="s2">
+          <div class="unit-badge badge-avail">Available Now</div>
+          <div class="slide on"><img src="2br/IMG_5756.jpeg" alt="Barrington Pointe courtyard" loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5755.jpeg"  alt="Building exterior"          loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5731.jpeg"  alt="Furnished living room"      loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5730.jpeg"  alt="Modern kitchen"             loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5747.jpeg"  alt="Open kitchen island"        loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5724.jpeg"  alt="Dining area"                loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5744.jpeg"  alt="Furnished bedroom"          loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5743.jpeg"  alt="Bathroom with granite"      loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5746.jpeg"  alt="Second bathroom"            loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5735.jpeg"  alt="Unit interior"              loading="lazy"></div>
+          <div class="slide"><img src="2br/IMG_5745.jpeg"  alt="Unit detail"                loading="lazy"></div>
+          <button class="sl-btn prev" onclick="mv('s2',-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="sl-btn next" onclick="mv('s2', 1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <div class="sl-dots" id="d2"></div>
+        </div>
+        <div class="unit-body">
+          <div class="unit-type">2-Bedroom Unit</div>
+          <div class="unit-name">Two Bedroom</div>
+          <div class="unit-feats">
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fully Furnished</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>2 Bedrooms</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Full Kitchen</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Private Balcony</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>In-Unit Washer/Dryer</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Granite Countertops</div>
+          </div>
+          <div class="unit-foot">
+            <div class="unit-rate"><strong>TDY Rates</strong>Per diem honored</div>
+            <button class="btn btn-gold" onclick="openModal('2BR')">Book a Tour</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3BR -->
+      <div class="unit-card reveal d2">
+        <div class="uslider" id="s3">
+          <div class="unit-badge badge-soon">Coming Soon</div>
+          <div class="slide on"><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><p>Photos Coming Soon</p></div></div>
+          <div class="slide"><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><p>Photos Coming Soon</p></div></div>
+          <div class="slide"><div class="ph"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg><p>Photos Coming Soon</p></div></div>
+          <button class="sl-btn prev" onclick="mv('s3',-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="sl-btn next" onclick="mv('s3', 1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <div class="sl-dots" id="d3"></div>
+        </div>
+        <div class="unit-body">
+          <div class="unit-type">3-Bedroom Unit</div>
+          <div class="unit-name">Three Bedroom</div>
+          <div class="unit-feats">
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fully Furnished</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>3 Bedrooms</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Full Kitchen</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Private Balcony</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>In-Unit Washer/Dryer</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Granite Countertops</div>
+          </div>
+          <div class="unit-foot">
+            <div class="unit-rate"><strong>TDY Rates</strong>Per diem honored</div>
+            <button class="btn btn-gold" onclick="openModal('3BR')">Book a Tour</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY US / FEATURES ── -->
+<section id="why">
+  <div class="container">
+    <div class="why-grid">
+
+      <div class="why-imgs reveal">
+        <img src="2br/IMG_5747.jpeg" alt="Barrington Pointe kitchen" class="why-main">
+        <img src="2br/IMG_5744.jpeg" alt="Furnished bedroom"         class="why-accent">
+        <div class="why-badge">
+          <div class="n">4mi</div>
+          <div class="l">From Keesler Air Force Base</div>
+        </div>
+      </div>
+
+      <div class="reveal d2">
+        <span class="label">Why Choose Us</span>
+        <h2 class="section-title">Everything Included.<br>Nothing to Worry About.</h2>
+        <div class="divider"></div>
+        <p class="section-sub">We handle every detail so you can arrive, settle in, and focus on your mission. Our TDY units are designed specifically for service members who deserve comfort away from home.</p>
+        <div class="why-list">
+          <div class="why-row">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            </div>
+            <div class="why-txt">
+              <h4>Move-In Ready</h4>
+              <p>Arrive with just your suitcase. Every unit is fully furnished and stocked for immediate occupancy.</p>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="why-txt">
+              <h4>Flexible Stay Lengths</h4>
+              <p>Whether your TDY is two weeks or several months, we accommodate your orders and schedule.</p>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <div class="why-txt">
+              <h4>Easy Reservations</h4>
+              <p>Book online or call/text (858) 740-6190. We'll confirm availability and rates same day.</p>
+            </div>
+          </div>
+          <div class="why-row">
+            <div class="why-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div class="why-txt">
+              <h4>Safe &amp; Secure Complex</h4>
+              <p>Digital keyless entry, well-lit grounds, and a secure gated community — peace of mind guaranteed.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section id="gallery">
+  <div class="container">
+    <div class="gal-hd reveal">
+      <span class="label">Photo Gallery</span>
+      <h2 class="section-title">See It for Yourself</h2>
+      <div class="divider center"></div>
+      <p class="section-sub" style="margin:0 auto;text-align:center;">Explore our beautifully furnished 2-bedroom units. 3-bedroom photos coming soon.</p>
+    </div>
+    <div class="gal-grid">
+      <div class="gi tall reveal"    onclick="lb(0)"><img src="2br/IMG_5756.jpeg" alt="Courtyard"><div class="gi-ov"><span>Courtyard</span></div></div>
+      <div class="gi reveal d1"      onclick="lb(1)"><img src="2br/IMG_5755.jpeg" alt="Exterior"><div class="gi-ov"><span>Building Exterior</span></div></div>
+      <div class="gi reveal d2"      onclick="lb(2)"><img src="2br/IMG_5731.jpeg" alt="Living Room"><div class="gi-ov"><span>Living Room</span></div></div>
+      <div class="gi reveal d1"      onclick="lb(3)"><img src="2br/IMG_5730.jpeg" alt="Kitchen"><div class="gi-ov"><span>Kitchen</span></div></div>
+      <div class="gi wide reveal d2" onclick="lb(4)"><img src="2br/IMG_5747.jpeg" alt="Open Kitchen"><div class="gi-ov"><span>Open Kitchen Layout</span></div></div>
+      <div class="gi reveal d3"      onclick="lb(5)"><img src="2br/IMG_5724.jpeg" alt="Dining"><div class="gi-ov"><span>Dining Area</span></div></div>
+      <div class="gi reveal d1"      onclick="lb(6)"><img src="2br/IMG_5744.jpeg" alt="Bedroom"><div class="gi-ov"><span>Master Bedroom</span></div></div>
+      <div class="gi reveal d2"      onclick="lb(7)"><img src="2br/IMG_5743.jpeg" alt="Bathroom"><div class="gi-ov"><span>Bathroom</span></div></div>
+      <div class="gi reveal d3"      onclick="lb(8)"><img src="2br/IMG_5746.jpeg" alt="Bathroom 2"><div class="gi-ov"><span>Second Bathroom</span></div></div>
+      <div class="gi reveal d4"      onclick="lb(9)"><img src="2br/IMG_5735.jpeg" alt="Interior"><div class="gi-ov"><span>Interior</span></div></div>
+      <div class="gi reveal d5"      onclick="lb(10)"><img src="2br/IMG_5745.jpeg" alt="Interior"><div class="gi-ov"><span>Interior Detail</span></div></div>
+    </div>
+    <div style="text-align:center;margin-top:44px;">
+      <button class="btn btn-outline-d" onclick="openModal()">Schedule a Tour to See More</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOCATION ── -->
+<section id="location">
+  <div class="container">
+    <div class="loc-grid">
+      <div class="reveal">
+        <span class="label">Our Location</span>
+        <h2 class="section-title light">Perfectly Positioned<br>Near Keesler AFB</h2>
+        <p class="loc-desc">Just 4 miles from Keesler Air Force Base, Barrington Pointe TDY places you in the heart of D'Iberville — convenient to the base, surrounded by great dining, shopping at The Promenade, and the beautiful Mississippi Gulf Coast.</p>
+        <div class="loc-items">
+          <div class="loc-item">
+            <div class="loc-ico"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <div><h4>Address</h4><p>12088 Lamey Bridge Rd, D'Iberville, MS 39540</p></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><h4>4 Miles from Keesler AFB</h4><p>Approximately an 8-minute drive to the base</p></div>
+          </div>
+          <div class="loc-item">
+            <div class="loc-ico"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+            <div><h4>Contact Us</h4><p>(858) 740-6190 · barringtonpointems@gmail.com</p></div>
+          </div>
+        </div>
+        <div style="margin-top:36px;">
+          <button class="btn btn-gold" onclick="openModal()">Book a Tour Today</button>
+        </div>
+      </div>
+
+      <div class="map-card reveal d2">
+        <iframe
+          class="map-frame"
+          src="https://maps.google.com/maps?q=12088+Lamey+Bridge+Rd,+D%27Iberville,+MS+39540&output=embed&z=15"
+          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Barrington Pointe Location Map">
+        </iframe>
+        <div class="map-foot">
+          <div class="map-addr">
+            <strong>Barrington Pointe TDY</strong>
+            12088 Lamey Bridge Rd<br>D'Iberville, MS 39540
+          </div>
+          <a href="https://maps.google.com/?q=12088+Lamey+Bridge+Rd,+D%27Iberville,+MS+39540"
+             target="_blank" rel="noopener" class="dir-btn">
+            <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ── -->
+<section id="cta">
+  <div class="container">
+    <div class="cta-inner reveal">
+      <span class="label">Ready to Book?</span>
+      <h2 class="section-title">Schedule Your Tour Today</h2>
+      <div class="divider center"></div>
+      <p>See why service members choose Barrington Pointe for their TDY stay. Contact us to check availability, ask questions, or book your tour — we're ready to help.</p>
+      <div class="cta-btns">
+        <button class="btn btn-gold" onclick="openModal()">Book a Tour</button>
+        <a href="tel:8587406190" class="btn btn-outline-d">
+          <svg viewBox="0 0 24 24" width="15" height="15" stroke="currentColor" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Call (858) 740-6190
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="container">
+    <div class="foot-top">
+      <div class="foot-logo">
+        <img src="logo.PNG" alt="Barrington Pointe">
+        <p>Premium TDY accommodations near Keesler Air Force Base in D'Iberville, MS. Fully furnished, move-in ready. TDY rates honored.</p>
+        <div class="foot-contact">
+          <div class="fci"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>12088 Lamey Bridge Rd, D'Iberville, MS 39540</div>
+          <div class="fci"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.59 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(858) 740-6190</div>
+          <div class="fci"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>barringtonpointems@gmail.com</div>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#units">Our Units</a></li>
+          <li><a href="#gallery">Photo Gallery</a></li>
+          <li><a href="#why">Amenities</a></li>
+          <li><a href="#location">Location &amp; Directions</a></li>
+          <li><a href="#" onclick="event.preventDefault();openModal()">Book a Tour</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>TDY Info</h4>
+        <ul>
+          <li><a href="#perks">TDY Rates Honored</a></li>
+          <li><a href="#perks">Utilities Included</a></li>
+          <li><a href="#units">2-Bedroom Units</a></li>
+          <li><a href="#units">3-Bedroom Units</a></li>
+          <li><a href="https://www.barringtonpointe.com" target="_blank" rel="noopener">Long-Term Rentals ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <div class="foot-copy">© 2025 Barrington Pointe TDY · D'Iberville, MS · All rights reserved.</div>
+      <div class="tdy-badge">★&nbsp; TDY Rates Honored</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ── LIGHTBOX ── -->
+<div id="lb-el" role="dialog" aria-label="Photo viewer">
+  <button class="lb-close" onclick="lbClose()">✕</button>
+  <div class="lb-wrap">
+    <button class="lb-nav prev" onclick="lbNav(-1)">&#8249;</button>
+    <img id="lbImg" src="" alt="">
+    <button class="lb-nav next" onclick="lbNav(1)">&#8250;</button>
+    <div class="lb-ct" id="lbCt"></div>
+  </div>
+</div>
+
+<!-- ── TOUR MODAL ── -->
+<div id="modal" role="dialog" aria-label="Book a Tour">
+  <div class="modal-bg" onclick="closeModal()"></div>
+  <div class="modal-card">
+    <div class="modal-hd">
+      <button class="modal-x" onclick="closeModal()">✕</button>
+      <div class="modal-lbl">Barrington Pointe TDY</div>
+      <h2>Book a Tour</h2>
+      <p>Fill out the form below and we'll confirm your tour within 24 hours.</p>
+    </div>
+    <div class="modal-body">
+      <form id="tForm" onsubmit="submitForm(event)">
+        <input type="hidden" name="access_key" value="2b239150-0112-47fd-bd0b-5460207f64e3">
+        <input type="hidden" name="subject" value="New Tour Request — Barrington Pointe TDY">
+        <input type="hidden" name="from_name" value="Barrington Pointe TDY Website">
+        <div class="frow">
+          <div class="fg"><label for="fn">First Name *</label><input type="text" id="fn" name="first_name" required placeholder="John"></div>
+          <div class="fg"><label for="ln">Last Name *</label><input type="text" id="ln" name="last_name" required placeholder="Smith"></div>
+        </div>
+        <div class="fg"><label for="em">Email Address *</label><input type="email" id="em" name="email" required placeholder="john.smith@email.com"></div>
+        <div class="fg"><label for="ph">Phone Number *</label><input type="tel" id="ph" name="phone" required placeholder="(555) 000-0000"></div>
+        <div class="frow">
+          <div class="fg">
+            <label for="unit">Unit Interest</label>
+            <select id="unit" name="unit_interest">
+              <option value="">Select unit size</option>
+              <option value="2BR">2-Bedroom</option>
+              <option value="3BR">3-Bedroom</option>
+              <option value="either">Either / Flexible</option>
+            </select>
+          </div>
+          <div class="fg"><label for="td">Preferred Tour Date</label><input type="date" id="td" name="tour_date"></div>
+        </div>
+        <div class="fg"><label for="arr">Estimated TDY Arrival Date</label><input type="date" id="arr" name="arrival_date"></div>
+        <div class="fg"><label for="msg">Additional Notes</label><textarea id="msg" name="message" placeholder="Questions or special requirements..."></textarea></div>
+        <button type="submit" class="form-sub" id="formBtn">Request Tour &rarr;</button>
+        <p class="form-note">We respect your privacy and will never share your information.</p>
+      </form>
+      <div class="form-ok" id="formOk">
+        <div class="ok-ico"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <h3>Tour Request Sent!</h3>
+        <p>Thank you! We'll reach out within 24 hours to confirm your tour at Barrington Pointe.<br><br>Questions in the meantime? Call or text us at <a href="tel:8587406190">(858) 740-6190</a>.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FLOATING BUTTON ── -->
+<button id="fab" onclick="openModal()" aria-label="Book a Tour">
+  <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+  Book a Tour
+</button>
+
+<script>
+/* ── NAVBAR ── */
+const nav = document.getElementById('nav');
+const fab = document.getElementById('fab');
+window.addEventListener('scroll', () => {
+  const s = window.scrollY > 60;
+  nav.classList.toggle('solid', s);
+  fab.classList.toggle('show', s);
+}, { passive: true });
+
+/* ── MOBILE NAV ── */
+const burger  = document.getElementById('burger');
+const mobNav  = document.getElementById('mobNav');
+burger.addEventListener('click', () => {
+  burger.classList.toggle('on');
+  mobNav.classList.toggle('on');
+  document.body.style.overflow = mobNav.classList.contains('on') ? 'hidden' : '';
+});
+function closeMob() {
+  burger.classList.remove('on');
+  mobNav.classList.remove('on');
+  document.body.style.overflow = '';
+}
+
+/* ── HERO ZOOM ── */
+window.addEventListener('load', () => document.getElementById('heroBg').classList.add('zoomed'));
+
+/* ── SCROLL REVEAL ── */
+const ro = new IntersectionObserver(es => {
+  es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1, rootMargin: '0px 0px -48px 0px' });
+document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
+
+/* ── UNIT SLIDERS ── */
+const ss = {};
+function initSlider(id) {
+  const el     = document.getElementById(id);
+  const slides = [...el.querySelectorAll('.slide')];
+  const dots   = document.getElementById('d' + id.slice(1));
+  ss[id] = { cur: 0, tot: slides.length };
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'sl-dot' + (i === 0 ? ' on' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.onclick = () => go(id, i);
+    dots.appendChild(d);
+  });
+}
+function go(id, idx) {
+  const el     = document.getElementById(id);
+  const slides = [...el.querySelectorAll('.slide')];
+  const dots   = [...document.getElementById('d' + id.slice(1)).querySelectorAll('.sl-dot')];
+  const s      = ss[id];
+  slides[s.cur].classList.remove('on');
+  dots[s.cur].classList.remove('on');
+  s.cur = ((idx % s.tot) + s.tot) % s.tot;
+  slides[s.cur].classList.add('on');
+  dots[s.cur].classList.add('on');
+}
+function mv(id, dir) { go(id, ss[id].cur + dir); }
+initSlider('s2');
+initSlider('s3');
+setInterval(() => mv('s2', 1), 5200);
+
+/* Touch swipe for sliders */
+['s2','s3'].forEach(id => {
+  const el = document.getElementById(id);
+  let tx = 0;
+  el.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+  el.addEventListener('touchend',   e => {
+    const d = tx - e.changedTouches[0].clientX;
+    if (Math.abs(d) > 44) mv(id, d > 0 ? 1 : -1);
+  }, { passive: true });
+});
+
+/* ── GALLERY LIGHTBOX ── */
+const imgs = [
+  { src: '2br/IMG_5756.jpeg', lbl: 'Courtyard' },
+  { src: '2br/IMG_5755.jpeg', lbl: 'Building Exterior' },
+  { src: '2br/IMG_5731.jpeg', lbl: 'Living Room' },
+  { src: '2br/IMG_5730.jpeg', lbl: 'Kitchen' },
+  { src: '2br/IMG_5747.jpeg', lbl: 'Open Kitchen Layout' },
+  { src: '2br/IMG_5724.jpeg', lbl: 'Dining Area' },
+  { src: '2br/IMG_5744.jpeg', lbl: 'Master Bedroom' },
+  { src: '2br/IMG_5743.jpeg', lbl: 'Bathroom' },
+  { src: '2br/IMG_5746.jpeg', lbl: 'Second Bathroom' },
+  { src: '2br/IMG_5735.jpeg', lbl: 'Interior' },
+  { src: '2br/IMG_5745.jpeg', lbl: 'Interior Detail' },
+];
+let lbIdx = 0;
+const lbEl  = document.getElementById('lb-el');
+const lbImg = document.getElementById('lbImg');
+const lbCt  = document.getElementById('lbCt');
+
+function lb(i) {
+  lbIdx = i; lbSet();
+  lbEl.classList.add('on');
+  document.body.style.overflow = 'hidden';
+}
+function lbClose() {
+  lbEl.classList.remove('on');
+  document.body.style.overflow = '';
+}
+function lbNav(d) { lbIdx = (lbIdx + d + imgs.length) % imgs.length; lbSet(); }
+function lbSet() {
+  lbImg.src = imgs[lbIdx].src;
+  lbImg.alt = imgs[lbIdx].lbl;
+  lbCt.textContent = (lbIdx + 1) + ' / ' + imgs.length + ' — ' + imgs[lbIdx].lbl;
+}
+lbEl.addEventListener('click', e => { if (e.target === lbEl) lbClose(); });
+
+/* Swipe lightbox */
+let lbTx = 0;
+lbEl.addEventListener('touchstart', e => { lbTx = e.touches[0].clientX; }, { passive: true });
+lbEl.addEventListener('touchend',   e => {
+  const d = lbTx - e.changedTouches[0].clientX;
+  if (Math.abs(d) > 44) lbNav(d > 0 ? 1 : -1);
+}, { passive: true });
+
+/* ── TOUR MODAL ── */
+function openModal(unit) {
+  if (unit) document.getElementById('unit').value = unit;
+  document.getElementById('tForm').style.display = '';
+  document.getElementById('formOk').classList.remove('on');
+  document.getElementById('modal').classList.add('on');
+  document.body.style.overflow = 'hidden';
+  // Set min dates
+  const today = new Date().toISOString().split('T')[0];
+  document.getElementById('td').min  = today;
+  document.getElementById('arr').min = today;
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('on');
+  document.body.style.overflow = '';
+}
+async function submitForm(e) {
+  e.preventDefault();
+  const btn = document.getElementById('formBtn');
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  try {
+    const data = new FormData(e.target);
+    const res  = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: data });
+    const json = await res.json();
+    if (json.success) {
+      document.getElementById('tForm').style.display = 'none';
+      document.getElementById('formOk').classList.add('on');
+      e.target.reset();
+    } else {
+      alert('Something went wrong. Please call us at (858) 740-6190.');
+      btn.textContent = 'Request Tour →';
+      btn.disabled = false;
+    }
+  } catch {
+    alert('Network error. Please call us at (858) 740-6190.');
+    btn.textContent = 'Request Tour →';
+    btn.disabled = false;
+  }
+}
+
+/* ── KEYBOARD NAVIGATION ── */
+document.addEventListener('keydown', e => {
+  if (lbEl.classList.contains('on')) {
+    if (e.key === 'ArrowLeft')  lbNav(-1);
+    if (e.key === 'ArrowRight') lbNav(1);
+    if (e.key === 'Escape')     lbClose();
+  }
+  if (document.getElementById('modal').classList.contains('on') && e.key === 'Escape') {
+    closeModal();
+  }
+});
+</script>
+</body>
+</html>
