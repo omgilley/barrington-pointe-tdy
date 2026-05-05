@@ -128,11 +128,11 @@
     .nav-wrap { display: flex; align-items: center; justify-content: space-between; }
 
     .nav-logo img {
-      height: 64px; width: auto;
+      height: 84px; width: auto;
       filter: brightness(0) invert(1);
       transition: height var(--t);
     }
-    #nav.solid .nav-logo img { height: 52px; }
+    #nav.solid .nav-logo img { height: 68px; }
 
     .nav-links { display: flex; align-items: center; gap: 34px; }
     .nav-links a {
@@ -292,7 +292,7 @@
     #units { padding: 108px 0; background: var(--cream); }
     .units-hd { text-align: center; margin-bottom: 64px; }
     .units-hd .section-sub { margin: 0 auto; text-align: center; }
-    .units-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+    .units-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
 
     .unit-card {
       background: var(--white); border-radius: var(--radius-lg);
@@ -667,7 +667,7 @@
       .gal-hd   { margin-bottom: 30px; }
 
       /* Units */
-      .units-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
+      .units-grid { grid-template-columns: 1fr 1fr; max-width: 100%; margin: 0; gap: 24px; }
       .uslider { aspect-ratio: 16/9; }
 
       /* Why — hide image stack, show text only */
@@ -711,6 +711,7 @@
       .perk-name { font-size: 11px; }
 
       /* Units */
+      .units-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
       .unit-body { padding: 20px 20px 24px; }
       .unit-name { font-size: 22px; }
       .unit-feats { grid-template-columns: 1fr; gap: 6px; }
@@ -858,8 +859,39 @@
     </div>
     <div class="units-grid">
 
-      <!-- 2BR -->
+      <!-- 1BR -->
       <div class="unit-card reveal">
+        <div class="uslider" id="s1">
+          <div class="unit-badge badge-avail">Available Now</div>
+          <div class="slide on"><img src="1br/IMG_4585.jpeg" alt="1BR open living area"      loading="lazy"></div>
+          <div class="slide"><img src="1br/IMG_4584.jpeg"    alt="1BR dining and kitchen"    loading="lazy"></div>
+          <div class="slide"><img src="1br/IMG_4583.webp"    alt="1BR kitchen"               loading="lazy"></div>
+          <div class="slide"><img src="1br/IMG_4517.jpeg"    alt="1BR bedroom"               loading="lazy"></div>
+          <div class="slide"><img src="1br/IMG_4586.jpeg"    alt="1BR bathroom"              loading="lazy"></div>
+          <button class="sl-btn prev" onclick="mv('s1',-1)"><svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg></button>
+          <button class="sl-btn next" onclick="mv('s1', 1)"><svg viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg></button>
+          <div class="sl-dots" id="d1"></div>
+        </div>
+        <div class="unit-body">
+          <div class="unit-type">1-Bedroom Unit</div>
+          <div class="unit-name">One Bedroom</div>
+          <div class="unit-feats">
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Fully Furnished</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>1 Bedroom</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Full Kitchen</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Granite Countertops</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>In-Unit Washer/Dryer</div>
+            <div class="uf"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>Marble Tile Bathroom</div>
+          </div>
+          <div class="unit-foot">
+            <div class="unit-rate"><strong>TDY Rates</strong>Per diem honored</div>
+            <button class="btn btn-gold" onclick="openModal('1BR')">Book a Tour</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2BR -->
+      <div class="unit-card reveal d1">
         <div class="uslider" id="s2">
           <div class="unit-badge badge-avail">Available Now</div>
           <div class="slide on"><img src="2br/IMG_5756.jpeg" alt="Barrington Pointe courtyard" loading="lazy"></div>
@@ -988,7 +1020,7 @@
             </div>
             <div class="why-txt">
               <h4>Safe &amp; Secure Complex</h4>
-              <p>Digital keyless entry, well-lit grounds, and a secure gated community — peace of mind guaranteed.</p>
+              <p>Digital keyless entry and well-lit grounds give you complete peace of mind throughout your stay.</p>
             </div>
           </div>
         </div>
@@ -1005,15 +1037,25 @@
       <span class="label">Photo Gallery</span>
       <h2 class="section-title">See It for Yourself</h2>
       <div class="divider center"></div>
-      <p class="section-sub" style="margin:0 auto;text-align:center;">Explore our beautifully furnished 2-bedroom units. 3-bedroom photos coming soon.</p>
+      <p class="section-sub" style="margin:0 auto;text-align:center;">Explore our beautifully furnished 1, 2, and 3-bedroom units — all move-in ready.</p>
     </div>
     <div class="gal-tabs">
-      <button class="gal-tab active" onclick="switchTab('2br',this)">2 Bedroom</button>
+      <button class="gal-tab active" onclick="switchTab('1br',this)">1 Bedroom</button>
+      <button class="gal-tab"        onclick="switchTab('2br',this)">2 Bedroom</button>
       <button class="gal-tab"        onclick="switchTab('3br',this)">3 Bedroom</button>
     </div>
 
+    <!-- 1BR gallery -->
+    <div class="gal-panel gal-grid active" id="gal-1br">
+      <div class="gi wide" onclick="lb('1br',0)"><img src="1br/IMG_4585.jpeg" alt="Living Area"><div class="gi-ov"><span>Open Living Area</span></div></div>
+      <div class="gi"      onclick="lb('1br',1)"><img src="1br/IMG_4584.jpeg" alt="Dining & Kitchen"><div class="gi-ov"><span>Dining &amp; Kitchen</span></div></div>
+      <div class="gi"      onclick="lb('1br',2)"><img src="1br/IMG_4583.webp" alt="Kitchen"><div class="gi-ov"><span>Kitchen</span></div></div>
+      <div class="gi"      onclick="lb('1br',3)"><img src="1br/IMG_4517.jpeg" alt="Bedroom"><div class="gi-ov"><span>Bedroom</span></div></div>
+      <div class="gi"      onclick="lb('1br',4)"><img src="1br/IMG_4586.jpeg" alt="Bathroom"><div class="gi-ov"><span>Marble Tile Bathroom</span></div></div>
+    </div>
+
     <!-- 2BR gallery -->
-    <div class="gal-panel gal-grid active" id="gal-2br">
+    <div class="gal-panel gal-grid" id="gal-2br">
       <div class="gi tall" onclick="lb('2br',0)"><img src="2br/IMG_5756.jpeg" alt="Courtyard"><div class="gi-ov"><span>Courtyard</span></div></div>
       <div class="gi"      onclick="lb('2br',1)"><img src="2br/IMG_5755.jpeg" alt="Exterior"><div class="gi-ov"><span>Building Exterior</span></div></div>
       <div class="gi"      onclick="lb('2br',2)"><img src="2br/IMG_5731.jpeg" alt="Living Room"><div class="gi-ov"><span>Living Room</span></div></div>
@@ -1195,6 +1237,7 @@
             <label for="unit">Unit Interest</label>
             <select id="unit" name="unit_interest">
               <option value="">Select unit size</option>
+              <option value="1BR">1-Bedroom</option>
               <option value="2BR">2-Bedroom</option>
               <option value="3BR">3-Bedroom</option>
               <option value="either">Either / Flexible</option>
@@ -1282,9 +1325,12 @@ function go(id, idx) {
   dots[s.cur].classList.add('on');
 }
 function mv(id, dir) { go(id, ss[id].cur + dir); }
+initSlider('s1');
 initSlider('s2');
 initSlider('s3');
-setInterval(() => mv('s2', 1), 5200);
+setInterval(() => mv('s1', 1), 5000);
+setInterval(() => mv('s2', 1), 5400);
+setInterval(() => mv('s3', 1), 5800);
 
 /* Touch swipe for sliders */
 ['s2','s3'].forEach(id => {
@@ -1299,6 +1345,13 @@ setInterval(() => mv('s2', 1), 5200);
 
 /* ── GALLERY TABS ── */
 const galImgs = {
+  '1br': [
+    { src: '1br/IMG_4585.jpeg', lbl: 'Open Living Area' },
+    { src: '1br/IMG_4584.jpeg', lbl: 'Dining & Kitchen' },
+    { src: '1br/IMG_4583.webp', lbl: 'Kitchen' },
+    { src: '1br/IMG_4517.jpeg', lbl: 'Bedroom' },
+    { src: '1br/IMG_4586.jpeg', lbl: 'Marble Tile Bathroom' },
+  ],
   '2br': [
     { src: '2br/IMG_5756.jpeg', lbl: 'Courtyard' },
     { src: '2br/IMG_5755.jpeg', lbl: 'Building Exterior' },
@@ -1326,7 +1379,7 @@ const galImgs = {
     { src: '3br/IMG_5708.jpeg', lbl: 'Interior' },
   ]
 };
-let lbIdx = 0, lbSet_key = '2br';
+let lbIdx = 0, lbSet_key = '1br';
 const lbEl  = document.getElementById('lb-el');
 const lbImg = document.getElementById('lbImg');
 const lbCt  = document.getElementById('lbCt');
