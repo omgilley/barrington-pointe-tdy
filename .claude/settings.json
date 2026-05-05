@@ -11,7 +11,8 @@
       "Bash(python -c \"from PIL import Image; print\\('ok'\\)\")",
       "Bash(npm --version)",
       "Bash(npm list *)",
-      "Bash(node convert-heic.mjs)"
+      "Bash(node convert-heic.mjs)",
+      "Bash(vercel ls *)"
     ]
   }
 }
