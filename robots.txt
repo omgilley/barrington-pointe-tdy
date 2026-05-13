@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.barringtonpointetdy.com/sitemap.xml
+Sitemap: https://tdy.barringtonpointe.com/sitemap.xml
